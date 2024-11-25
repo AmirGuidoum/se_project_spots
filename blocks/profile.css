@@ -8,8 +8,7 @@
 .profile__column {
   display: flex;
   flex-direction: column;
-  height: 190px;
-
+  margin: 0 0 20px 0;
   opacity: 0.7;
 }
 .profile__avatar {
@@ -95,7 +94,6 @@
   .profile {
     flex-direction: column;
     max-width: 288px;
-    height: 274px;
     text-align: center;
     align-items: center;
     padding-top: 20px;
