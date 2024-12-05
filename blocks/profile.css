@@ -9,9 +9,9 @@
   display: flex;
   flex-direction: column;
   margin: 0;
-  opacity: 0.7;
 }
 .profile__avatar {
+  object-fit: cover;
   margin-right: 20px;
   height: 190px;
   width: 190px;
@@ -35,6 +35,7 @@
   margin: 0;
   max-width: 420px;
   font-weight: 500;
+  color: #212121;
   opacity: 0.7;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -46,10 +47,9 @@
 .profile__edit-btn {
   display: flex;
   align-items: center;
-
+  cursor: pointer;
   gap: 8px;
   margin-top: auto;
-
   background-color: transparent;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -69,6 +69,7 @@
 .profile__add-btn {
   padding: 0;
   display: flex;
+  cursor: pointer;
   border: 2px;
   justify-content: center;
   align-items: center;
@@ -108,22 +109,12 @@
   .profile__name {
     margin: 0 0 6px;
     max-width: 288px;
-    font-family: Poppins, Arial, Helvetica, sans-serif;
     font-size: 20px;
-    font-weight: 500;
     line-height: 20px;
-    text-overflow: ellipsis;
-    overflow: hidden;
   }
   .profile__description {
     margin: 0 0 32px;
     max-width: 288px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    -webkit-box-orient: vertical;
   }
 
   .profile__add-btn {
