@@ -38,3 +38,7 @@ Upon opening the website, the user will see his own profile with ability of addi
 This page is deployed to Github Pages
 
 - https://amirguidoum.github.io/se_project_spots/
+
+## Link Video
+
+- https://drive.google.com/file/d/1NxNGyR7VAUeudo6naz4qSTeLq8APM68O/view?usp=sharing
