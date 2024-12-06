@@ -19,6 +19,7 @@
 }
 
 .profile__name {
+  color: #212121;
   max-width: 420px;
   margin: 0 0 12px;
   font-weight: 500;

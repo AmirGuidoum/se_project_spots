@@ -28,6 +28,7 @@
   width: 23px;
   height: 20px;
   border: 2px;
+  background-size: contain;
   background-color: transparent;
   padding: 0;
   opacity: 0.4;
