@@ -81,7 +81,7 @@
   border: 1px solid #212121;
 }
 
-.modal__opened {
+.modal_opened {
   visibility: visible;
 }
 @media screen and (max-width: 627px) {
