@@ -38,6 +38,23 @@
 .card__like-button:hover {
   opacity: 1;
 }
+.card__like-button_liked {
+  background-image: url("../images/State=Liked.svg");
+  opacity: 1;
+}
+.card__like-button_liked:hover {
+  background-image: url("../images/State=Liked=hover.svg");
+}
+.card__delete-button {
+  margin: 10px 10px 371px 371px;
+  position: absolute;
+  border: none;
+  background: none;
+  padding: 0;
+}
+.card__delete-button:hover {
+  background-image: url("../images/State=Hover=delete.svg");
+}
 
 @media screen and (max-width: 627px) {
   .card__image {
