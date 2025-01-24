@@ -1,5 +1,6 @@
 .card {
   max-width: 413px;
+  position: relative;
 }
 .card__content {
   display: flex;
@@ -12,6 +13,7 @@
   object-fit: cover;
   display: block;
   border-radius: 8px;
+  cursor: pointer;
 }
 .card__title {
   font-family: Poppins, Arial, Helvetica, sans-serif;
@@ -30,6 +32,8 @@
   border: 2px;
   background-size: contain;
   background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: url("../images/heart.svg");
   padding: 0;
   opacity: 0.4;
   cursor: pointer;
@@ -40,17 +44,23 @@
 }
 .card__like-button_liked {
   background-image: url("../images/State=Liked.svg");
+  border: 1px;
   opacity: 1;
 }
+
 .card__like-button_liked:hover {
   background-image: url("../images/State=Liked=hover.svg");
 }
+
 .card__delete-button {
-  margin: 10px 10px 371px 371px;
   position: absolute;
+  top: 10px;
+  right: 10px;
   border: none;
   background: none;
   padding: 0;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 .card__delete-button:hover {
   background-image: url("../images/State=Hover=delete.svg");
