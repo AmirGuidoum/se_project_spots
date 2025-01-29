@@ -24,7 +24,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 413px;
+  max-width: 390px;
 }
 .card__like-button {
   width: 23px;
