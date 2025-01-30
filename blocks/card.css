@@ -81,3 +81,8 @@
     height: 18px;
   }
 }
+@media screen and (max-width: 320px) {
+  .card__title {
+    max-width: 268px;
+  }
+}

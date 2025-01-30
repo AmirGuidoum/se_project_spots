@@ -148,8 +148,8 @@
   }
 }
 @media screen and (max-width: 320px) {
-  .modal__close_type_preview {
-    top: -35.5px;
+  .modal__close-btn_type_preview {
+    top: -48px;
     right: 0px;
   }
   .modal__content_type_preview {
