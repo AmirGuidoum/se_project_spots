@@ -29,7 +29,7 @@ const profileEditButton = document.querySelector(".profile__edit-btn");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 const profileFormElement = editModal.querySelector("#form");
-
+//const modalContent = editModal.querySelector(".modal");
 const editModalCloseBtn = editModal.querySelector(".modal__close-btn");
 const editModalNameInput = editModal.querySelector("#name");
 const editModalDescriptionInput = editModal.querySelector("#description");
@@ -45,12 +45,33 @@ const previewModal = document.querySelector("#preview-modal");
 const previewModalImageEl = previewModal.querySelector(".modal__image");
 const previewModalCaptionEl = previewModal.querySelector(".modal__caption");
 const previewModalCloseBtn = previewModal.querySelector("#close-button");
-
 function closeModal(modal) {
+  document.removeEventListener("Keydown", handleEscapeKey);
+  document.removeEventListener("mousedown", handleMouseClick);
   modal.classList.remove("modal_opened");
 }
 function openModal(modal) {
+  document.addEventListener("keydown", handleEscapeKey);
+  document.addEventListener("mousedown", handleMouseClick);
   modal.classList.add("modal_opened");
+}
+function handleEscapeKey(event) {
+  if (event.key === "Escape") {
+    closeModal(editModal);
+    closeModal(cardModal);
+    closeModal(previewModal);
+  }
+}
+function handleMouseClick(event) {
+  switch (event.target) {
+    case editModal:
+      closeModal(editModal);
+    case cardModal:
+      closeModal(cardModal);
+    case previewModal:
+      closeModal(previewModal);
+    default:
+  }
 }
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
@@ -130,6 +151,7 @@ function handleProfileFormSubmit(evt) {
 
   closeModal(editModal);
 }
+
 //profileEditButton.addEventListener("click", openModal);
 //editModalCloseBtn.addEventListener("click", closeModal);
 profileFormElement.addEventListener("submit", handleProfileFormSubmit);
