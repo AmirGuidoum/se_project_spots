@@ -12,33 +12,62 @@
       name="keywords"
       content="Spots,sharing,pictures,photograph,download"
     />
-    <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico " />
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico " />
     <title>Spots</title>
   </head>
 
+
   <body>
-    <div class="page">
+   <!--  <div class="page">
+      <h1 class="page__title">Hello from Webpack!</h1>
+      <h2 class="page__subtitle">Image and Font Files Processing!</h2>
+      <img class="page__image" id="image-steps" />
+      <div class="page__image page__image_achievements"></div>
+      <img
+        class="page__image"
+        src="<%= require('./images/website-contacts.jpg')%>"
+      /> -->
+
       <header class="header">
-        <img class="header__logo" alt="logo" src="./images/logo.svg" />
+        <img
+          class="header__logo"
+          alt="logo"
+          src="<%= require('./images/logo.svg')%>"
+        />
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img
-            class="profile__avatar"
-            alt="avatar profile picture"
-            src="./images/avatar.jpg"
-          />
+          <div class="profile__avatar-container">
+            <button class="profile__avatar-btn">
+
+              <img
+                class="profile__pencil-icon"
+                src="<%= require('./images/pencil-light.svg')%>"
+                alt="pencil icon"
+              />
+
+            </button>
+
+            <img
+              class="profile__avatar"
+              alt="avatar profile picture"
+              src="<%= require('./images/avatar.jpg')%>"
+            />
+          </div>
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
             <button class="profile__edit-btn" type="button">
-              <img src="images/editpin.svg" alt="edit button profile" />Edit
-              Profile
+              <img
+                src="<%= require('./images/editpin.svg')%>"
+                alt="edit button profile"
+              />
+              Edit profile
             </button>
           </div>
           <button class="profile__add-btn" type="button">
-            <img src="images/+.svg" alt="new post" />New Post
+            <img src="<%= require('./images/+.svg')%>" alt="new post" />New Post
           </button>
         </section>
         <section class="cards page__section">
@@ -47,7 +76,7 @@
               <li class="card">
                 <button type="button" class="card__delete-button">
                   <img
-                    src="./images/State=Default=delete.svg"
+                    src="<%= require('./images/State=Default=delete.svg')%>"
                     alt="delete-button"
                   />
                 </button>
@@ -65,7 +94,10 @@
       <div class="modal" id="edit-modal">
         <div class="modal__content">
           <button type="button" class="modal__close-btn">
-            <img src="./images/exitbutton.svg" alt="exitbutton" />
+            <img
+              src="<%= require('./images/exitbutton.svg')%>"
+              alt="exitbutton"
+            />
           </button>
           <h2 class="modal__title">Edit profile</h2>
           <form id="form" class="modal__form" novalidate>
@@ -100,10 +132,15 @@
         </div>
       </div>
 
+
+
       <div class="modal" id="add-card-modal">
         <div class="modal__content">
           <button type="button" class="modal__close-btn">
-            <img src="./images/exitbutton.svg" alt="exitbutton" />
+            <img
+              src="<%= require('./images/exitbutton.svg')%>"
+              alt="exitbutton"
+            />
           </button>
           <h2 class="modal__title">New Post</h2>
           <form class="modal__form" id="add-card-form" novalidate>
@@ -156,7 +193,49 @@
         <p class="modal__caption">Amir Guidoum</p>
       </div>
     </div>
-    <script defer src="./scripts/validation.js"></script>
-    <script defer src="./scripts/index.js"></script>
+
+  </div>
+</div>
+
+<div class="modal" id="avatar-modal">
+  <div class="modal__content">
+    <button type="button" class="modal__close-btn">
+      <img
+        src="<%= require('./images/exitbutton.svg')%>"
+        alt="exitbutton"
+      />
+    </button>
+    <h2 class="modal__title">Edit avatar</h2>
+    <form class="modal__form" id="edit-avatar-form" novalidate>
+      <label for="profile-avatar-input" class="modal__label" >
+        <input
+          id="profile-avatar-input"
+          name="avatar"
+          placeholder="avatar goes here"
+          class="modal__input"
+          type="url"
+          required
+        />
+        <span id="profile-avatar-input-error" class="modal__error"></span>
+      </label>
+      <button type="submit" class="modal__submit-btn">Save</button>
+    </form>
+     </div>
+  </div>
+  <div class="modal " id="delete-modal">
+    <div class="modal__content modal__content_type_delete">
+      <button type="button" class="modal__close-btn modal__close-btn_type_delete">
+        <img
+          src="<%= require('./images/exitbutton.svg')%>"
+          alt="exitbutton"
+        />
+      </button>
+      <h2 class="modal__title" >Are you sure you want to delete this image?</h2>
+      <form class="modal__form" id="delete-form" novalidate>
+        <button type="submit" class="modal__submit-btn modal__submit-btn_bg-color-delete" id="delete-button">Delete</button>
+        <button type="button" class="modal__submit-btn modal__submit-btn_bg-color-cancel" id="cancelButton">Cancel</button>
+      </form>
+       </div>
+    </div>
   </body>
 </html>
